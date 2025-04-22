@@ -1,13 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { AlertCircle, Compass, Download, Github, Home, Info } from 'lucide-react';
+import { AlertCircle, Download, Github, Home, Info } from 'lucide-react';
 
 const Header: React.FC = () => {
   return (
-    <header className="bg-dark-950/80 backdrop-blur-sm sticky top-0 z-50 border-b border-dark-800">
+    <header className="bg-dark-900 sticky top-0 z-50 border-b border-dark-800">
       <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center py-4">
-        <div className="flex items-center gap-2 mb-4 md:mb-0">
-          <Compass className="h-6 w-6 text-accent-400" />
+        <div className="flex items-center gap-3 mb-4 md:mb-0">
+          <div className="bg-white rounded-full p-1 flex items-center justify-center">
+            <img 
+              src="https://raw.githubusercontent.com/SathyaSeelanG/open-graph/refs/heads/main/open-graph-icon.png" 
+              alt="OpenGraph Checker Logo" 
+              className="h-8 w-8"
+            />
+          </div>
           <Link to="/" className="text-xl font-bold text-white">OpenGraph Checker</Link>
         </div>
         

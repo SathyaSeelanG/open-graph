@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Compass, Github, Linkedin, X } from 'lucide-react';
+import { Github, Linkedin, X } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -10,8 +10,14 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <Compass className="h-6 w-6 text-blue-400" />
+            <div className="flex items-center gap-3 mb-4">
+              <div className="bg-white rounded-full p-1 flex items-center justify-center">
+                <img 
+                  src="https://raw.githubusercontent.com/SathyaSeelanG/open-graph/refs/heads/main/open-graph-icon.png" 
+                  alt="OpenGraph Checker Logo" 
+                  className="h-8 w-8" 
+                />
+              </div>
               <span className="text-xl font-bold">OpenGraph Checker</span>
             </div>
             <p className="text-gray-400 mb-4">
@@ -62,9 +68,18 @@ const Footer: React.FC = () => {
         </div>
         
         <div className="border-t border-gray-800 mt-12 pt-8">
-          <p className="text-gray-400 text-center">
-            © {currentYear} OpenGraph Checker. All rights reserved.
-          </p>
+          <div className="flex items-center justify-center gap-2">
+            <div className="bg-white rounded-full p-0.5 flex items-center justify-center">
+              <img 
+                src="https://raw.githubusercontent.com/SathyaSeelanG/open-graph/refs/heads/main/open-graph-icon.png" 
+                alt="OpenGraph Checker Logo" 
+                className="h-5 w-5" 
+              />
+            </div>
+            <p className="text-gray-400 text-center">
+              © {currentYear} OpenGraph Checker. All rights reserved.
+            </p>
+          </div>
         </div>
       </div>
     </footer>
