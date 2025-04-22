@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "extensionHost",
+            "request": "launch",
+            "name": "Run Extension",
+            "runtimeArgs": [
+                "--extensionDevelopmentPath=${workspaceFolder}/seo-extension"
+            ],
+            "outFiles": [
+                "${workspaceFolder}/seo-extension/out/**/*.js"
+            ],
+            "preLaunchTask": "tsc: build - tsconfig.json",
+            "postDebugTask": "npm: clean",
+            "sourceMaps": true,
+            "smartStep": true
+        }
+    ]
+}
